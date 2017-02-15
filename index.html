@@ -13,6 +13,8 @@
       var redirectUri = localStorage.getItem('zendeskRedirectUri');
 
       var code = getQueryStringValue('code');
+      
+      console.log(code, redirectUri);
 
       if (code && code.length && redirectUri) {
         window.location = decodeURIComponent(redirectUri) + '?code=' + code;
